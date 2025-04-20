@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: provider
+  datasource:
+    url: jdbc:mysql://localhost:3306/world?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 102030
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: city-provider
+logging:
+  level:
+    root: INFO
+info.app.name: provider
+info.company.name: example
+info.author.name: demo
